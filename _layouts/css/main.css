@@ -1,1 +1,40 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+}
 
+nav {
+    background-color: #002B5C;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    padding: 40px;
+    text-align: center;
+}
+
+footer {
+    background-color: #002B5C;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.blurb {
+    font-size: 18px;
+}
