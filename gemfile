@@ -1,0 +1,7 @@
+source "https://rubygems.org"
+
+# This includes Jekyll and all GitHub Pages plugins
+gem "github-pages", group: :jekyll_plugins
+
+# IMPORTANT: Ruby 3.0+ requires this to run the local server
+gem "webrick"

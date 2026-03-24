@@ -1,0 +1,48 @@
+/* Global Color Scheme*/
+:root {
+  --primary-color: #1e90ff;
+  --title-text: #ffffff; /* White */
+  --gray: #333333; /* Dark gray */
+}
+
+/* Style the Main Header*/
+header {
+  background-color: #4d64ab;
+  text-align: center;
+  padding: 50px;
+  font-size: 25px;
+  color: var(--title-text)
+}
+
+
+/* Style the topnav */
+ul.topnav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--gray);
+}
+
+/* Style links in topnav */
+ul.topnav li a {
+  display: block;
+  color: #f1f1f1;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+ul.topnav li a:hover {
+  background-color: #dddddd;
+  color: black;
+}
+
+footer {
+  background-color: #f1f1f1;
+  text-align: left;
+  padding: 4px;
+  color: var(--title-text);
+  background-color: var(--gray);
+  a:link{color: var(--title-text)};
+}
