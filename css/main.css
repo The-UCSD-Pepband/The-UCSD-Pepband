@@ -15,7 +15,11 @@ header {
 }
 
 hawaiian {
-  background-image: url("https://github.com/The-UCSD-Pepband/The-UCSD-Pepband/blob/main/images/hawaiianprint.jpg?raw=true">)
+  background-image: url("https://github.com/The-UCSD-Pepband/The-UCSD-Pepband/blob/main/images/hawaiianprint.jpg?raw=true")
+  background-size: cover;
+  background-position: center;
+  color: #000080;
+  padding: 40px; 
 }
 
 
