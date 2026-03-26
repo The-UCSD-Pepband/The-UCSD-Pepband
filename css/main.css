@@ -5,19 +5,80 @@
   --gray: #333333; /* Dark gray */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.profile-card {
+  display: flex;               /* Aligns image and text side-by-side */
+  align-items: center;         /* Vertically centers everything */
+  background-color: #ffffff;
+  border-radius: 20px;         /* The "rounded box" look */
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a soft lift */
+  max-width: 600px;            /* Keeps the box from getting too wide */
+  margin: 20px auto;           /* Centers the box on the page */
+  border: 1px solid #eaeaea;
+}
+
+.image-container {
+  flex-shrink: 0;              /* Prevents the circle from squishing */
+  margin-right: 25px;          /* Space between image and text */
+}
+
+.profile-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;          /* Makes it a perfect circle */
+  object-fit: cover;           /* Ensures image isn't stretched */
+  border: 3px solid #00629b;   /* Optional: adds a colored border */
+}
+
+.profile-name {
+  margin: 0;                   /* Removes default browser spacing */
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.profile-bio {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Style the Main Header*/
 header {
-   /*tbd*/
+   padding: 300px;
+   text-align: center;
 }
-
-hawaiian {
-  background-image: url("https://github.com/The-UCSD-Pepband/The-UCSD-Pepband/blob/main/images/hawaiianprint.jpg?raw=true")
-  background-size: cover;
-  background-position: center;
-  color: #000080;
-  padding: 40px; 
-}
-
 
 /* Style the topnav */
 ul.topnav {
