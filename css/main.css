@@ -8,13 +8,11 @@
 /* For the Default page layout*/
 /* Style the Main Header*/
 header {
-   padding: 20px;
+   padding: 1.25rem;
    text-align: center;
    color: var(--title-text);
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
    font-weight: bold;
-   size: 20px;
-   font-size: 60px;
+   font-size: 3.75rem;
 }
 /* Style the Nav Bar and Dropdown Menus*/
 .navbar {
@@ -23,10 +21,10 @@ header {
 }
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 1rem;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1rem;
   text-decoration: none;
 }
 .dropdown {
@@ -34,11 +32,11 @@ header {
   overflow: hidden;
 }
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 1rem;  
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 0.875rem 1rem;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -50,14 +48,14 @@ header {
   display: none;
   position: absolute;
   background-color:  #333;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 10rem;
+  box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
   z-index: 1;
 }
 .dropdown-content a {
   float: none;
   color: white;
-  padding: 12px 16px;
+  padding: 0.75rem 1rem;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -69,17 +67,11 @@ header {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-
-
-
-
-
-
+/*Style the footer*/
 footer {
   background-color: #f1f1f1;
   text-align: left;
-  padding: 4px;
+  padding: 0.25rem;
   color: var(--title-text);
   background-color: var(--gray);
   a:link{color: var(--title-text)};
@@ -110,32 +102,32 @@ footer {
 .twocolumn {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
-  gap: 20px;            
-  max-width: 2400px;    
-  margin-top: 20px auto;    
-  padding: 0 20px;      
+  gap: 1.25rem;            
+  max-width: 150rem;    
+  margin-top: 1.25rem auto;    
+  padding: 1.25rem;    
 }
 .leaderbio {
   display: flex;              
   align-items: center;         
   background-color: #ffffff;
-  border-radius: 20px;         
-  padding: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);     
-  border: 1px solid #eaeaea;
-  margin-left: 0px;
-  margin-right: 0px;
+  border-radius: 1.25rem;         
+  padding: 1.5rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);     
+  border: 0.125rem solid #eaeaea;
+  margin-left: 0rem;
+  margin-right: 0rem;
 }
 .imagecontainer{
   flex-shrink: 0;              
-  margin-right: 25px;          
+  margin-right: 1.5rem;          
 }
 .imgcircle {
-  width: 100px;
-  height: 100px;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;          
   object-fit: cover;           
-  border: 3px solid var(--gray);   
+  border: 0.125rem solid var(--gray);   
 }
 .name {
   margin: 0;                   
@@ -147,7 +139,7 @@ footer {
   line-height: 0;
 }
 .bio {
-  margin-top: 8px;
+  margin-top: 0.5rem;
   font-size: 1rem;
   color: #555;
   line-height: 1.5;
