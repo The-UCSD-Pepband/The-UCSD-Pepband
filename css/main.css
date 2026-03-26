@@ -5,6 +5,43 @@
   --gray: #333333; /* Dark gray */
 }
 
+/* For the Default page layout*/
+/* Style the Main Header*/
+header {
+   padding: 60px;
+   text-align: center;
+   color:#dddddd;
+   size: 20px;
+   font-size: 40px;
+}
+/* Style the topnav */
+ul.topnav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--gray);
+}
+/* Style links in topnav */
+ul.topnav li a {
+  display: block;
+  color: #f1f1f1;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Change color on hover */
+ul.topnav li a:hover {
+  background-color: #dddddd;
+  color: black;
+}
+footer {
+  background-color: #f1f1f1;
+  text-align: left;
+  padding: 4px;
+  color: var(--title-text);
+  background-color: var(--gray);
+  a:link{color: var(--title-text)};
+}
 
 
 
@@ -18,38 +55,56 @@
 
 
 
-.profile-card {
-  display: flex;               /* Aligns image and text side-by-side */
-  align-items: center;         /* Vertically centers everything */
+
+
+
+
+
+
+
+
+
+/* Leadership Page - container, image, name, and description formatting*/
+.twocolumn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;            
+  max-width: 2400px;    
+  margin-top: 20px auto;    
+  padding: 0 20px;      
+}
+.leaderbio {
+  display: flex;              
+  align-items: center;         
   background-color: #ffffff;
-  border-radius: 20px;         /* The "rounded box" look */
+  border-radius: 20px;         
   padding: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a soft lift */
-  max-width: 600px;            /* Keeps the box from getting too wide */
-  margin: 20px auto;           /* Centers the box on the page */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);     
   border: 1px solid #eaeaea;
+  margin-left: 0px;
+  margin-right: 0px;
 }
-
-.image-container {
-  flex-shrink: 0;              /* Prevents the circle from squishing */
-  margin-right: 25px;          /* Space between image and text */
+.imagecontainer{
+  flex-shrink: 0;              
+  margin-right: 25px;          
 }
-
-.profile-circle {
+.imgcircle {
   width: 100px;
   height: 100px;
-  border-radius: 50%;          /* Makes it a perfect circle */
-  object-fit: cover;           /* Ensures image isn't stretched */
-  border: 3px solid #00629b;   /* Optional: adds a colored border */
+  border-radius: 50%;          
+  object-fit: cover;           
+  border: 3px solid var(--gray);   
 }
-
-.profile-name {
-  margin: 0;                   /* Removes default browser spacing */
+.name {
+  margin: 0;                   
   font-size: 1.6rem;
   color: #222;
 }
-
-.profile-bio {
+.position{
+  font-weight: bold;
+  line-height: 0;
+}
+.bio {
   margin-top: 8px;
   font-size: 1rem;
   color: #555;
@@ -73,41 +128,3 @@
 
 
 
-
-/* Style the Main Header*/
-header {
-   padding: 300px;
-   text-align: center;
-}
-
-/* Style the topnav */
-ul.topnav {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: var(--gray);
-}
-
-/* Style links in topnav */
-ul.topnav li a {
-  display: block;
-  color: #f1f1f1;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-ul.topnav li a:hover {
-  background-color: #dddddd;
-  color: black;
-}
-
-footer {
-  background-color: #f1f1f1;
-  text-align: left;
-  padding: 4px;
-  color: var(--title-text);
-  background-color: var(--gray);
-  a:link{color: var(--title-text)};
-}
