@@ -131,7 +131,7 @@ footer {
 .column-home {
   flex: 50%;
   padding: 20px;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 2 / 3;
   text-align: center;
   align-items: center;
 }
