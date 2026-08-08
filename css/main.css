@@ -237,6 +237,7 @@ footer {
 }
 .position{
   font-weight: bold;
+  font-size: 1.2rem;
 }
 .bio {
   margin-top: 0.5rem;
@@ -246,6 +247,12 @@ footer {
 
 
 
+/* Leadership Page - container, image, name, and description formatting*/
+h3 {
+  text-align:center;
+  font-size: 1.2rem;   
+  font-weight: normal;
+}
 
 
 
