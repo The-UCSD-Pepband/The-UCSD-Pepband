@@ -183,18 +183,21 @@ footer {
   padding-left:20%;
   padding-right: 20%;
 }
-.center-align{
+.center-align {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Changed from center so long content flows naturally */
+  width: 100%;
 }
 .google-form {
-  width: 100%;          /* Fills the available width */
-  max-width: 900px;     /* Prevents it from getting TOO wide on desktop */
-  height: 3017px;       /* Keeps your specific height */
+  width: 100%;
+  max-width: 900px;
+  height: 3050px !important;     /* Slightly boosted + !important override */
+  min-height: 3050px !important; /* Prevents flexbox from shrinking it */
   display: block;
-  margin: 0 auto;       /* Centers the form if it hits the max-width */
+  margin: 0 auto;
   border: none;
+  margin-bottom: 2rem;
 }
 
 
