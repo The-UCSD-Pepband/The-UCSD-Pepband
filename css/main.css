@@ -139,7 +139,7 @@ footer {
   width: 100%;
   max-width: 900px;     /* Prevents it from stretching excessively on ultra-wide screens */
   margin: 0 auto;       /* Centers the calendar */
-  aspect-ratio: 16 / 9; /* Maintains a clean height-to-width ratio */
+  aspect-ratio: 1 / 1; /* Maintains a clean height-to-width ratio */
 }
 
 .calendar-wrapper iframe {
