@@ -279,7 +279,7 @@ footer {
   gap:15px; 
 }
 .picture-line img{
-  width: calc(33.333% - 10px);
+  width: calc(50% - 33.333%);
   height: auto;
 }
 
