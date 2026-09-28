@@ -210,8 +210,10 @@ footer {
 
 
 
-.leaderbio { 
-  outline: 4px solid rgb(18, 2B, 49) !important; 
+.leaderbio {
+  outline-width: 4px;
+  outline-style: solid;
+  outline-color: #182B49;
 }
 .twocolumn .leaderbio .picture-line img {
   width: 8rem !important;
