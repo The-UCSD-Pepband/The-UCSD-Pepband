@@ -211,29 +211,10 @@ footer {
 
 
 
-/* Leadership Page - container, image, name, and description formatting */
-.twocolumn {
-  display: flex;
-  box-sizing: border-box;
-  margin-top: 0px;
-  row-gap: 1.25rem;
-  column-gap: 2rem; /* Reduced from 15rem so elements have room */
-  max-width: 150rem; 
-  margin: 1.25rem auto;
-  padding: 1.25rem; 
-}
-
-.col {
-  flex: 1 1 50%; /* Takes up 50% width of the parent layout */
-  padding: 20px;
-  text-align: center;
-  align-items: center;
-  /* Removed aspect-ratio: 2 / 3 to let height scale naturally with text */
-}
-
+/* 1. Make leaderbio stack vertically so the bio sits UNDER or ABOVE the images */
 .leaderbio {
   display: flex;
-  flex-direction: column; /* Stacks image/pictures on top and content below, OR set to row if preferred */
+  flex-direction: column; /* Stacks picture-line and content-container vertically */
   align-items: center;
   background-color: #ffffff;
   border-radius: 1.25rem;
@@ -243,58 +224,35 @@ footer {
   margin-top: 1.5rem;
 }
 
+/* 2. Make content-container span 100% of the card width */
 .content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Takes full width inside the leaderbio card */
+  width: 100%;
   padding: 10px;
-  word-wrap: break-word;
-  overflow: visible;
+  box-sizing: border-box;
 }
 
-.imagecontainer {
-  flex-shrink: 0;
-  margin-bottom: 1rem;
-}
-
-.imgcircle {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 0.125rem solid var(--gray);
-}
-
-.name {
-  margin: 0;
-  font-size: 1.6rem;
-  color: #222;
-}
-
-.position {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
+/* 3. Set the bio width relative to the CARD, not a squeezed flex-item */
 .bio {
-  width: 100%; /* Set to 100% so it fills the content area naturally */
-  max-width: 32rem; /* Optional: bounds max reading length for clean readability */
-  margin-top: 0.5rem;
+  width: 80%; /* Takes up 80% of the card width (or set to 100% / 50% as needed) */
+  margin: 0.5rem auto 0 auto;
   font-size: 1rem;
   color: #555;
   text-align: center;
 }
 
+/* 4. Ensure picture-line images shrink appropriately */
 .picture-line {
   display: flex;
   justify-content: center;
-  gap: 15px; 
-  margin-bottom: 1rem;
+  gap: 15px;
+  width: 100%;
 }
 
 .picture-line img {
-  width: 6rem;
+  width: 6rem; /* Gives each of the 3 photos a fixed circle size */
   height: 6rem;
   border-radius: 50%;
   object-fit: cover;
