@@ -257,7 +257,12 @@ footer {
   border-radius: 50%;
   object-fit: cover;
 }
-
+.leaderbio { 
+  flex-direction: column !important; 
+}
+.picture-line img { 
+  width: 6rem !important; height: 6rem !important; 
+}
 
 
 /* Leadership Page - container, image, name, and description formatting*/
