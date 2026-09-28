@@ -211,77 +211,93 @@ footer {
 
 
 
-/* Leadership Page - container, image, name, and description formatting*/
+/* Leadership Page - container, image, name, and description formatting */
 .twocolumn {
-   display: flex;
+  display: flex;
   box-sizing: border-box;
   margin-top: 0px;
-  row-gap: 1.25rem;       /* Vertical space between rows */
-  column-gap: 15rem;       /* Increased horizontal space between columns */
+  row-gap: 1.25rem;
+  column-gap: 2rem; /* Reduced from 15rem so elements have room */
   max-width: 150rem; 
-  margin: 1.25rem auto;   /* Note: fixed invalid margin syntax */
+  margin: 1.25rem auto;
   padding: 1.25rem; 
 }
+
 .col {
-  flex: 50%;
+  flex: 1 1 50%; /* Takes up 50% width of the parent layout */
   padding: 20px;
-  aspect-ratio: 2 / 3;
   text-align: center;
   align-items: center;
+  /* Removed aspect-ratio: 2 / 3 to let height scale naturally with text */
 }
+
 .leaderbio {
-  display: flex;              
-  align-items: center;         
+  display: flex;
+  flex-direction: column; /* Stacks image/pictures on top and content below, OR set to row if preferred */
+  align-items: center;
   background-color: #ffffff;
-  border-radius: 1.25rem;         
+  border-radius: 1.25rem;
   padding: 1.5rem;
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);     
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
   border: 0.125rem solid #eaeaea;
-  margin-left: 0rem;
-  margin-right: 0rem;
   margin-top: 1.5rem;
 }
+
 .content-container {
-  display: block;        
-  height: auto;          
-  padding: 10px;         
-  word-wrap: break-word; 
-  overflow: visible;     
-  flex: 1;               
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Takes full width inside the leaderbio card */
+  padding: 10px;
+  word-wrap: break-word;
+  overflow: visible;
 }
-.imagecontainer{
-  flex-shrink: 0;              
-  margin-right: 1.5rem;          
+
+.imagecontainer {
+  flex-shrink: 0;
+  margin-bottom: 1rem;
 }
+
 .imgcircle {
   width: 6rem;
   height: 6rem;
-  border-radius: 50%;          
-  object-fit: cover;           
-  border: 0.125rem solid var(--gray);   
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.125rem solid var(--gray);
 }
+
 .name {
-  margin: 0;                   
+  margin: 0;
   font-size: 1.6rem;
   color: #222;
 }
-.position{
+
+.position {
   font-weight: bold;
   font-size: 1.2rem;
 }
+
 .bio {
-  width: 50%;
+  width: 100%; /* Set to 100% so it fills the content area naturally */
+  max-width: 32rem; /* Optional: bounds max reading length for clean readability */
   margin-top: 0.5rem;
   font-size: 1rem;
   color: #555;
+  text-align: center;
 }
-.picture-line{
+
+.picture-line {
   display: flex;
-  gap:15px; 
+  justify-content: center;
+  gap: 15px; 
+  margin-bottom: 1rem;
 }
-.picture-line img{
-  width: calc(50% - 33.333%);
-  height: auto;
+
+.picture-line img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 
