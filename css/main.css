@@ -233,11 +233,14 @@ footer {
 }
 
 .twocolumn .leaderbio .picture-line img.imgcircle {
-  width: 8rem;      /* was 5rem */
-  height: 8rem;     /* keep width and height equal so they stay circles */
-  border-radius: 50%;
-  object-fit: cover;
-}
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 10rem;      /* upper limit on size */
+    aspect-ratio: 1 / 1;   /* keeps them square, so circles stay circles */
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
 .twocolumn .leaderbio .content-container {
   display: flex;
