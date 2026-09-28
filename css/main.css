@@ -211,11 +211,12 @@ footer {
 
 
 
-/* 1. Make leaderbio stack vertically so the bio sits UNDER or ABOVE the images */
+/* Card: photos on the left, text on the right */
 .leaderbio {
   display: flex;
-  flex-direction: column; /* Stacks picture-line and content-container vertically */
+  flex-direction: row;          /* side by side instead of stacked */
   align-items: center;
+  gap: 1.5rem;
   background-color: #ffffff;
   border-radius: 1.25rem;
   padding: 1.5rem;
@@ -224,54 +225,46 @@ footer {
   margin-top: 1.5rem;
 }
 
-/* 2. Make content-container span 100% of the card width */
-.content-container {
+/* Left half: photos */
+.picture-line {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
+  flex: 0 0 50%;                /* exactly half the card */
+  flex-wrap: wrap;              /* photos wrap if they don't fit */
+  justify-content: center;
+  gap: 15px;
   box-sizing: border-box;
 }
 
-/* 3. Set the bio width relative to the CARD, not a squeezed flex-item */
-.bio {
-  width: 80%; /* Takes up 80% of the card width (or set to 100% / 50% as needed) */
-  margin: 0.5rem auto 0 auto;
-  font-size: 1rem;
-  color: #555;
-  text-align: center;
-}
-
-/* 4. Ensure picture-line images shrink appropriately */
-.picture-line {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  width: 100%;
-}
-
 .picture-line img {
-  width: 6rem; /* Gives each of the 3 photos a fixed circle size */
+  width: 6rem;
   height: 6rem;
   border-radius: 50%;
   object-fit: cover;
 }
-.leaderbio { 
-  flex-direction: column !important; 
-}
-.picture-line img { 
-  width: 6rem !important; height: 6rem !important; 
-}
 
-
-/* Leadership Page - container, image, name, and description formatting*/
-h3 {
-  text-align:center;
-  font-size: 1.2rem;   
-  font-weight: normal;
+/* Right half: name, title, bio */
+.content-container {
+  display: flex;
+  flex: 1 1 0;                  /* takes the remaining half */
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;                 /* prevents overflow squeezing */
+  padding: 10px;
+  box-sizing: border-box;
 }
 
+.bio {
+  width: 100%;                  /* fill the right half */
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+  color: #555;
+  text-align: left;             /* easier to read than centered for a paragraph */
+}
+
+/* Stack on phones */
+@media (max-width: 700px) {
+  .leaderbio { flex-direction: column; }
+  .picture-line,
 
 
 
