@@ -209,11 +209,17 @@ footer {
 
 
 
-
+/* leadership page items */
 .leaderbio {
   outline-width: 4px;
   outline-style: solid;
   outline-color: #182B49;
+}
+.twocolumn {
+  display: block;   /* or flex-direction: column; if it's flex */
+}
+.twocolumn .col {
+  width: 100%;
 }
 .twocolumn .leaderbio .picture-line img {
   width: 8rem !important;
