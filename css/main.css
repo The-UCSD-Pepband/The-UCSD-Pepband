@@ -211,10 +211,9 @@ footer {
 
 
 
-/* Card: photos on the left, text on the right */
-.leaderbio {
+.twocolumn .leaderbio {
   display: flex;
-  flex-direction: row;          /* side by side instead of stacked */
+  flex-direction: row;
   align-items: center;
   gap: 1.5rem;
   background-color: #ffffff;
@@ -225,73 +224,12 @@ footer {
   margin-top: 1.5rem;
 }
 
-/* Left half: photos */
-.picture-line {
-  display: flex;
-  flex: 0 0 50%;                /* exactly half the card */
-  flex-wrap: wrap;              /* photos wrap if they don't fit */
-  justify-content: center;
-  gap: 15px;
-  box-sizing: border-box;
-}
-
-.picture-line img {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* Right half: name, title, bio */
-.content-container {
-  display: flex;
-  flex: 1 1 0;                  /* takes the remaining half */
-  flex-direction: column;
-  align-items: flex-start;
-  min-width: 0;                 /* prevents overflow squeezing */
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.bio {
-  width: 100%;                  /* fill the right half */
-  margin: 0.5rem 0 0 0;
-  font-size: 1rem;
-  color: #555;
-  text-align: left;             /* easier to read than centered for a paragraph */
-}
-
-/* Stack on phones */
-@media (max-width: 700px) {
-  .twocolumn .leaderbio {
-    flex-direction: column;
-  }
-
-  .twocolumn .leaderbio .picture-line,
-  .twocolumn .leaderbio .content-container {
-    flex: 1 1 auto;
-    width: 100%;
-  }
-
-  .twocolumn .leaderbio .bio {
-    text-align: center;
-  }
-}
-
-.twocolumn .leaderbio {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1.5rem;
-}
-
 .twocolumn .leaderbio .picture-line {
   display: flex;
   flex: 0 0 50%;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  width: auto;
 }
 
 .twocolumn .leaderbio .picture-line img.imgcircle {
@@ -302,19 +240,33 @@ footer {
 }
 
 .twocolumn .leaderbio .content-container {
+  display: flex;
   flex: 1 1 0;
-  min-width: 0;
-  width: auto;
+  flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
+  padding: 10px;
   text-align: left;
 }
 
 .twocolumn .leaderbio .bio {
   width: 100%;
   margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+  color: #555;
   text-align: left;
 }
 
+/* Must stay LAST so it overrides the rules above on phones */
+@media (max-width: 700px) {
+  .twocolumn .leaderbio { flex-direction: column; }
+  .twocolumn .leaderbio .picture-line,
+  .twocolumn .leaderbio .content-container { flex: 1 1 auto; width: 100%; }
+  .twocolumn .leaderbio .bio { text-align: center; }
+}
+.leaderbio { 
+  outline: 4px solid red !important; 
+}
 
 
 
