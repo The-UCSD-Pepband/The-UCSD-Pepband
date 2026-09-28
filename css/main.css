@@ -233,8 +233,8 @@ footer {
 }
 
 .twocolumn .leaderbio .picture-line img.imgcircle {
-  width: 5rem;
-  height: 5rem;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
 }
